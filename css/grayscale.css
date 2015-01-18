@@ -319,16 +319,8 @@ body {
 }
 #loader.loaded {
 	transform:scale(0,0);
-	z-index:-9999;
+	display:none;
 }
 #wrap.loaded {
 	opacity: 1;
-}
- @keyframes moving {
- 0% {
-background-position: 0%;
-}
- 100% {
-background-position: 100%;
-}
 }

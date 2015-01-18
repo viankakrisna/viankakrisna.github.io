@@ -29,8 +29,9 @@
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
 <script> $(document).ready(function(){
-	$("#wrap").toggleClass("loaded");
 	$("#loader").toggleClass("loaded");
+	$("#wrap").toggleClass("loaded");
+	
 });
 </script>
 </head>
@@ -63,7 +64,7 @@
 	</nav>
 	<div id="mainArea"> 
 		<!-- Intro Header -->
-		<header class="intro">
+		<header class="intro" data-stellar-background-ratio="0.5">
 			<div class="intro-body">
 				<div class="container">
 					<div class="row">
@@ -137,7 +138,6 @@
 <script src="js/jquery.scroll_to.js"></script> 
 <script src="js/jquery.snapscroll.min.js"></script> 
 <script src="js/jquery.stellar.min.js"></script> 
-<script src="js/prefixfree.min.js"></script> 
 <!-- Custom Theme JavaScript --> 
 <script src="js/grayscale.js"></script>
 </body>
