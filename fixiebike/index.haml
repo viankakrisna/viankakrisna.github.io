@@ -1,0 +1,54 @@
+!!!
+%head
+  %meta{:charset => "utf-8"}
+    %title Parallax Fixie
+    %link{:href => "css/base.css", :rel => "stylesheet", :type => "text/css"}
+%body
+  #wrap
+    #wrapInner
+      .pager
+        %ul
+          %li
+            %a.active{:href => "#first"} 1
+          %li
+            %a{:href => "#second"} 2
+          %li
+            %a{:href => "#third"} 3
+          %li
+            %a{:href => "#fourth"} 4
+          %li
+            %a{:href => "#fifth"} 5
+          %li
+            %a{:href => "#sixth"} 6
+      #slides
+        %section#first{"data-stellar-background-ratio" => "0.4"}
+          %div
+            %p{"data-stellar-ratio" => "0.8"} First Bike
+            %a{:href => "#second"} NEXT
+        %section#second{"data-stellar-background-ratio" => "0.4"}
+          %div
+            %p{"data-stellar-ratio" => "0.8"} Second Bike
+            %a{:href => "#third"} NEXT
+        %section#third{"data-stellar-background-ratio" => "0.4"}
+          %div
+            %p{"data-stellar-ratio" => "0.8"} Third Bike
+            %a{:href => "#fourth"} NEXT
+        %section#fourth{"data-stellar-background-ratio" => "0.4"}
+          %div
+            %p{"data-stellar-ratio" => "0.8"} Fourth Bike
+            %a{:href => "#fifth"} NEXT
+        %section#fifth{"data-stellar-background-ratio" => "0.4"}
+          %div
+            %p{"data-stellar-ratio" => "0.8"} Fifth Bike
+            %a{:href => "#sixth"} NEXT
+        %section#sixth{"data-stellar-background-ratio" => "0.4"}
+          %div
+            %p{"data-stellar-ratio" => "0.8"} Sixth Bike
+            %a{:href => "#first"} TOP
+      / wrapInner
+    / wrap
+  %script{:src => "js/jquery-2.1.3.min.js"}
+  %script{:src => "js/jquery.stellar.js"}
+  %script{:src => "http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"}
+  %script{:src => "http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"}
+  %script{:src => "js/index.js"}
