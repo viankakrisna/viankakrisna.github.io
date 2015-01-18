@@ -44,11 +44,12 @@ ul{
 }
 li{
 	list-style-type:none;
-	margin:10px;
+
 	padding: 0;
 }
-#wrap li{
+#download li{
 	display:inline-block;
+		margin:10px;
 }
 .light {
 	font-weight: 400;
