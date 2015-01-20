@@ -21,7 +21,8 @@ p {
 	font-size: 18px;
 	line-height: 1.5;
 }
- @media(min-width:767px) {
+
+@media(min-width:767px) {
 p {
 	margin: 0 0 35px;
 	font-size: 20px;
@@ -29,7 +30,7 @@ p {
 }
 }
 a {
-	color: #219ab3;
+	color: #eeeeee;
 	-webkit-transition: all .2s ease-in-out;
 	-moz-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
@@ -38,18 +39,17 @@ a:hover, a:focus {
 	text-decoration: none;
 	color: #11505d;
 }
-ul{
-	margin:0 0 35px;
-	padding:0;
-}
-li{
-	list-style-type:none;
-
+ul {
+	margin: 0 0 35px;
 	padding: 0;
 }
-#download li{
-	display:inline-block;
-		margin:10px;
+li {
+	list-style-type: none;
+	padding: 0;
+}
+#download li {
+	display: inline-block;
+	margin: 10px;
 }
 .light {
 	font-weight: 400;
@@ -91,7 +91,8 @@ li{
 	outline: 0;
 	background-color: rgba(255,255,255,.3);
 }
- @media(min-width:767px) {
+
+@media(min-width:767px) {
 .navbar {
 	padding: 20px 0;
 	border-bottom: 0;
@@ -134,7 +135,8 @@ li{
 .intro .intro-body .intro-text {
 	font-size: 18px;
 }
- @media(min-width:767px) {
+
+@media(min-width:767px) {
 .intro {
 	height: 100vh;
 	padding: 0;
@@ -164,7 +166,7 @@ li{
 	outline: 0;
 	color: #fff;
 	background: rgba(255,255,255,.1);
-	transform:rotate(360deg)
+	transform: rotate(360deg)
 }
 .btn-circle i.animated {
 	-webkit-transition-property: -webkit-transform;
@@ -224,7 +226,8 @@ li{
 	background-size: cover;
 	-o-background-size: cover;
 }
- @media(min-width:767px) {
+
+@media(min-width:767px) {
 .content-section {
 	padding: 90px 0 150px;
 }
@@ -245,25 +248,27 @@ li{
 	transition: all .3s ease-in-out;
 }
 .btn-default {
-	border: 1px solid #219ab3;
-	color: #219ab3;
+	border: 1px solid #eeeeee;
+	color: #eeeeee;
 	background-color: transparent;
 }
 .btn-default:hover, .btn-default:focus {
-	border: 1px solid #219ab3;
+	border: 1px solid #eeeeee;
 	outline: 0;
 	color: #000;
-	background-color: #219ab3;
+	background-color: #eeeeee;
 }
 ul.banner-social-buttons {
 	margin-top: 0;
 }
- @media(max-width:1199px) {
+
+@media(max-width:1199px) {
 ul.banner-social-buttons {
 	margin-top: 15px;
 }
 }
- @media(max-width:767px) {
+
+@media(max-width:767px) {
 ul.banner-social-buttons li {
 	display: block;
 	margin-bottom: 20px;
@@ -313,32 +318,41 @@ body {
 	height: 100vh;
 	color: #fff;
 	transition: 0.5s;
-	z-index:9999;
+	z-index: 9999;
 }
-#loader > p{
-	display:block;
+#loader > p {
+	display: block;
 	width: 100px;
 	height: 100px;
 	border-radius: 50px;
 	border: 5px solid #ffffff;
-	line-height:100px;
-	text-align:center;
+	line-height: 100px;
+	text-align: center;
 	margin: auto;
 	margin-top: calc(25% - 50px);
 }
 #loader.loaded {
-	transform:scale(0,0);
-	display:none;
+	transform: scale(0, 0);
+	display: none;
 }
 #wrap.loaded {
 	opacity: 1;
 }
-.backtotop
-{
-	position:fixed;
-	bottom:0;
-	right:0;
-	margin:10px}
-#about{
-	padding:100px 0 0 0;
+.backtotop {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	margin: 10px
+}
+#about {
+	padding: 100px 0 0 0;
+}
+section {
+	height: 100vh;
+	padding: 0;
+}
+section > * {
+	margin: 50vh 0 0 0 0;
+	padding: 0;
+	transform:translateY(10vh);
 }
