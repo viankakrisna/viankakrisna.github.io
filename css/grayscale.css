@@ -3,7 +3,7 @@ body {
 	width: 100%;
 	height: 100%; height: 100vh; 
 	font-family: 'Open Sans', sans-serif;
-	color: black;
+	color: #000;
 	background-color: #f9f9f9;
 }
 html {
@@ -83,13 +83,13 @@ li {
 .navbar-custom .navbar-brand .navbar-toggle {
 	padding: 4px 6px;
 	font-size: 16px;
-	color: black;
+	color: #000;
 }
 .navbar-custom .navbar-brand .navbar-toggle:focus, .navbar-custom .navbar-brand .navbar-toggle:active {
 	outline: 0;
 }
 .navbar-custom a {
-	color: black;
+	color: #000;
 }
 .navbar-custom .nav li.active {
 	outline: nonte;
@@ -126,7 +126,7 @@ li {
 	background-color: #f9f9f9;
 }
 .navbar-custom.top-nav-collapse {
-	border-bottom: 3px solid black;
+	border-bottom: 3px solid #000;
 }
 }
 
@@ -136,7 +136,7 @@ li {
 	width: 100%;
 	height: 100%; height: 100vh; 
 	text-align: center;
-	color: black;
+	color: #000;
 	background: url(../img/intro-bg.jpg) no-repeat;
 	background-color: #f9f9f9;
 	-webkit-background-size: cover;
@@ -182,10 +182,10 @@ li {
 	height: 70px;
 	margin-top: 15px;
 	padding: 7px 16px;
-	border: 2px solid black;
+	border: 2px solid #000;
 	border-radius: 35px;
 	font-size: 40px;
-	color: black;
+	color: #000;
 	background: 0 0;
 	-webkit-transition: background .3s ease-in-out;
 	-moz-transition: background .3s ease-in-out;
@@ -246,7 +246,7 @@ li {
 }
 .download-section {
 	width: 100%;
-	color: black;
+	color: #000;
 	background: url(../img/downloads-bg.jpg) no-repeat;
 	background-color: #f9f9f9;
 	-webkit-background-size: cover;
@@ -275,8 +275,8 @@ li {
 	
 }
 .btn-default {
-	border: 3px solid black;
-	color: black;
+	border: 3px solid #000;
+	color: #000;
 	background-color: transparent;
 	border-radius: 0;
 }
@@ -331,7 +331,7 @@ img::selection {
  background: 0 0;
 }
 body {
-	webkit-tap-highlight-color: black;
+	webkit-tap-highlight-color: #000;
 }
 #wrap {
 	opacity: 0;
@@ -345,7 +345,7 @@ body {
 	left: 0;
 	width: 100%;
 	height: 100%; height: 100vh; 
-	color: black;
+	color: #000;
 	transition: 0.5s;
 	z-index: 9999;
 }
@@ -354,7 +354,7 @@ body {
 	width: 100px;
 	height: 100px;
 	border-radius: 50px;
-	border: 5px solid black;
+	border: 5px solid #000;
 	line-height: 100px;
 	text-align: center;
 	margin: auto;
