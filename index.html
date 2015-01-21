@@ -158,14 +158,28 @@
 <script src="js/bootstrap.min.js"></script> 
 
 <!-- Plugin JavaScript --> 
-<script src="js/jquery.easing.min.js"></script> 
+<!--script src="js/jquery.easing.min.js"></script> 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script> 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
 <script src="js/wow.min.js"></script> 
 <script src="js/jquery.scroll_to.js"></script> 
 <script src="js/jquery.snapscroll.min.js"></script> 
-<script src="js/jquery.stellar.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>  
+<script src="js/jquery.stellar.min.js"></script-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<script>$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});</script>  
 <!-- Custom Theme JavaScript --> 
 <script src="js/grayscale.js"></script>
 </body>
