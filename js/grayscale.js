@@ -173,46 +173,17 @@ function init() {
         icon: image
     });
 }
-
-//animate on scroll
- wow = new WOW(
-    {
-      boxClass:     'wow',      // default
-      animateClass: 'animated', // default
-      offset:       0,          // default
-      mobile:       true,       // default
-      live:         true        // default
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
     }
-  )
-  wow.init();
-
-//parallax background 
-  $.stellar();
-
-//smooth scrolling  
-  $(function(){	
-
-        var $window = $(window);
-	var scrollTime = 1.2;
-	var scrollDistance = 200;
-
-	$window.on("mousewheel DOMMouseScroll", function(event){
-
-		event.preventDefault();	
-
-		var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
-		var scrollTop = $window.scrollTop();
-		var finalScroll = scrollTop - parseInt(delta*scrollDistance);
-
-		TweenMax.to($window, scrollTime, {
-			scrollTo : { y: finalScroll, autoKill:true },
-				ease: Power1.easeOut,
-				overwrite: 5							
-			});
-
-	});
+  });
 });
-
-/*$(function() {
-  $("#mainArea").snapscroll();
-});*/
