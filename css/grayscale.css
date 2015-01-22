@@ -93,7 +93,7 @@ li {
 	color: #000;
 }
 .navbar-custom .nav li.active {
-	outline: nonte;
+	outline: none;
 	background-color: #fc0303;
 	color: #f9f9f9;
 }
@@ -137,18 +137,13 @@ li {
 	color: #000;
 	background: url(../img/intro-bg.jpg) no-repeat;
 	background-color: #f9f9f9;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
 	background-size: cover;
 }
-.intro .intro-body {
-	 
-}
-.intro .intro-body .brand-heading {
+.intro .brand-heading {
 	font-size: 40px;
-	margin: 25vh 0 35px 0
+	margin: 15vh 0 35px;
 }
-.intro .intro-body .intro-text {
+.intro .intro-text {
 	display: inline-block;
 	font-size: 18px;
 	background-color: #fc0303;
@@ -167,10 +162,10 @@ li {
 	min-height: 100vh;
 	padding: 0;
 }
-.intro .intro-body .brand-heading {
+.intro  .brand-heading {
 	font-size: 100px;
 }
-.intro .intro-body .intro-text {
+.intro  .intro-text {
 	font-size: 25px;
 }
 ;
