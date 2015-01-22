@@ -1,14 +1,16 @@
 body {
-	overflow-x:hidden;
+	overflow-x: hidden;
 	width: 100%;
-	height: 100%; min-height: 100vh; 
+	height: 100%;
+	min-height: 100vh;
 	font-family: 'Open Sans', sans-serif;
 	color: #000;
 	background-color: #f9f9f9;
 }
 html {
 	width: 100%;
-	height: 100%; min-height: 100vh; 
+	height: 100%;
+	min-height: 100vh;
 }
 h1, h2, h3, h4, h5, h6 {
 	margin: 35px 0 35px;
@@ -17,18 +19,17 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
 	letter-spacing: 1px;
 }
-h2{
-	display:inline-block;
+h2 {
+	display: inline-block;
 	color: #f9f9f9;
 	background: #fc0303;
 	padding: 5px;
-	transform:rotate(5deg);
-	transition:200ms;
+	transform: rotate(5deg);
+	transition: 200ms;
 }
-h2:hover
-	{
-		transform:rotate(-5deg)
-	}
+h2:hover {
+	transform: rotate(-5deg);
+}
 p {
 	margin: 0 0 25px;
 	font-size: 18px;
@@ -94,10 +95,10 @@ li {
 .navbar-custom .nav li.active {
 	outline: nonte;
 	background-color: #fc0303;
-	color: #f9f9f9
+	color: #f9f9f9;
 }
-.navbar-custom .nav li.active a{
-	color: #f9f9f9
+.navbar-custom .nav li.active a {
+	color: #f9f9f9;
 }
 .navbar-custom .nav li a {
 	-webkit-transition: background .3s ease-in-out;
@@ -107,13 +108,12 @@ li {
 .navbar-custom .nav li a:hover, .navbar-custom .nav li a:focus, .navbar-custom .nav li a.active {
 	outline: 0;
 	background-color: #fc0303;
-	color: #f9f9f9
+	color: #f9f9f9;
 }
 
 @media(min-width:767px) {
 .navbar {
 	padding: 20px 0;
-	
 	border-bottom: 0;
 	letter-spacing: 1px;
 	background: 0 0;
@@ -128,13 +128,13 @@ li {
 .navbar-custom.top-nav-collapse {
 	border-bottom: 3px solid #000;
 }
+;
 }
-
-
 .intro {
 	display: table;
 	width: 100%;
-	height: 100%; min-height: 100vh; 
+	height: 100%;
+	min-height: 100vh;
 	text-align: center;
 	color: #000;
 	background: url(../img/intro-bg.jpg) no-repeat;
@@ -157,17 +157,18 @@ li {
 	font-size: 18px;
 	background-color: #fc0303;
 	color: #f9f9f9;
-	padding: 5px	
+	padding: 5px;
 }
-.btn-circle{
+.btn-circle {
 	margin: 35px auto;
-	display:block;
-	clear:both;
+	display: block;
+	clear: both;
 }
 
 @media(min-width:767px) {
 .intro {
-	height: 100%; min-height: 100vh; 
+	height: 100%;
+	min-height: 100vh;
 	padding: 0;
 }
 .intro .intro-body .brand-heading {
@@ -176,6 +177,7 @@ li {
 .intro .intro-body .intro-text {
 	font-size: 25px;
 }
+;
 }
 .btn-circle {
 	width: 70px;
@@ -196,7 +198,7 @@ li {
 	color: #f9f9f9;
 	background: #fc0303;
 	border: #fc0303;
-	transform: rotate(360deg)
+	transform: rotate(360deg);
 }
 .btn-circle i.animated {
 	-webkit-transition-property: -webkit-transform;
@@ -226,7 +228,7 @@ li {
  100% {
  -webkit-transform: scale(1);
  transform: scale(1);
-}
+};
 }
  @-moz-keyframes pulse {
  0 {
@@ -240,11 +242,11 @@ li {
  100% {
  -moz-transform: scale(1);
  transform: scale(1);
-}
+};
 }
 .content-section {
 }
-.download-section {
+#download {
 	width: 100%;
 	color: #000;
 	background: url(../img/downloads-bg.jpg) no-repeat;
@@ -264,6 +266,7 @@ li {
 	height: 400px;
 	margin-top: 250px;
 }
+;
 }
 .btn {
 	text-transform: uppercase;
@@ -272,7 +275,6 @@ li {
 	-webkit-transition: all .3s ease-in-out;
 	-moz-transition: all .3s ease-in-out;
 	transition: all .3s ease-in-out;
-	
 }
 .btn-default {
 	border: 3px solid #000;
@@ -294,6 +296,7 @@ ul.banner-social-buttons {
 ul.banner-social-buttons {
 	margin-top: 15px;
 }
+;
 }
 
 @media(max-width:767px) {
@@ -305,6 +308,7 @@ ul.banner-social-buttons li {
 ul.banner-social-buttons li:last-child {
 	margin-bottom: 0;
 }
+;
 }
 footer {
 	padding: 50px 0;
@@ -312,10 +316,12 @@ footer {
 footer p {
 	margin: 0;
 }
+
 ::-webkit-selection {
  background: #f00;
  color: #f9f9f9;
 }
+
 ::-moz-selection {
  background: #f00;
  color: #f9f9f9;
@@ -334,7 +340,7 @@ body {
 	webkit-tap-highlight-color: #000;
 }
 #wrap {
-	transition: 1s
+	transition: 1s;
 }
 #loader {
 	position: fixed;
@@ -343,7 +349,8 @@ body {
 	right: 0;
 	left: 0;
 	width: 100%;
-	height: 100%; min-height: 100vh; 
+	height: 100%;
+	min-height: 100vh;
 	color: #000;
 	background: #f9f9f9;
 	transition: 0.5s;
@@ -368,7 +375,8 @@ body {
 	opacity: 1;
 }
 section {
-	height: 100%; min-height: 100vh; 
+	height: 100%;
+	min-height: 100vh;
 	width: 100%;
 	padding: 35px 0;
 	margin: 0;
@@ -378,11 +386,10 @@ section > * {
 	padding: 0;
 	transform: translateY(10vh);
 }
-
-.red{
-	display:inline-block;
+.red {
+	display: inline-block;
 	color: #f9f9f9;
 	background: #fc0303;
 	padding: 5px;
-	transform:rotate(-1deg)
+	transform: rotate(-1deg);
 }
