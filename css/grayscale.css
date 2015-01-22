@@ -141,8 +141,6 @@ li {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
-	-o-background-size: cover;
-	animation: moving 1s infinite;
 }
 .intro .intro-body {
 	 
