@@ -33,14 +33,12 @@ h2:hover {
 	transform: rotate(-5deg);
 }
 p {
-	margin: 0 0 25px;
 	font-size:110%;
 	line-height: 1.5;
 }
 
 @media(min-width:767px) {
 p {
-	margin: 0 0 10vh;
 	font-size: 110%;
 	line-height: 1.6;
 }
