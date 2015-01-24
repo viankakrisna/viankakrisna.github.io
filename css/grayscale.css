@@ -1,7 +1,6 @@
 body {
 	overflow-x: hidden;
 	width: 100%;
-	width: 100vw;
 	height: 100%;
 	min-height: 100vh;
 	font-family: 'Open Sans', sans-serif;
@@ -10,12 +9,11 @@ body {
 }
 html {
 	width: 100%;
-	width: 100vw;
 	height: 100%;
 	min-height: 100vh;
 }
 h1, h2, h3, h4, h5, h6 {
-	margin: 5vh 0 5vh;
+	margin: 35px 0 35px;
 	text-transform: uppercase;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 700;
@@ -33,13 +31,15 @@ h2:hover {
 	transform: rotate(-5deg);
 }
 p {
-	font-size:110%;
+	margin: 0 0 25px;
+	font-size: 18px;
 	line-height: 1.5;
 }
 
 @media(min-width:767px) {
 p {
-	font-size: 110%;
+	margin: 0 0 35px;
+	font-size: 20px;
 	line-height: 1.6;
 }
 }
@@ -54,7 +54,7 @@ a:hover, a:focus {
 	color: #fc0303;
 }
 ul {
-	margin: 0 0 10vh;
+	margin: 0 0 35px;
 	padding: 0;
 }
 li {
@@ -141,7 +141,7 @@ li {
 }
 .intro .brand-heading {
 	font-size: 40px;
-	margin: 15vh 0 10vh;
+	margin: 15vh 0 35px;
 }
 .intro .intro-text {
 	display: inline-block;
@@ -151,7 +151,7 @@ li {
 	padding: 5px;
 }
 .btn-circle {
-	margin: 10vh auto;
+	margin: 35px auto;
 	display: block;
 	clear: both;
 }
@@ -369,7 +369,7 @@ section {
 	height: 100%;
 	min-height: 100vh;
 	width: 100%;
-	padding: 10vh 0;
+	padding: 35px 0;
 	margin: 0;
 }
 section > * {
