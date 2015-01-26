@@ -133,7 +133,6 @@ li {
 .intro {
 	text-align: center;
 	width:100wh;
-  	height:100vh;
 	color: #000;
 	background: url(../img/intro-bg.jpg) no-repeat;
 	background-size: cover;
