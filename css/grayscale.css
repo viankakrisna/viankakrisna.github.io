@@ -373,9 +373,9 @@ section {
 	margin: 0;
 }
 section > * {
-	margin: 50vh 0 0 0 0;
+	margin: 50vh 0 0 0;
 	padding: 0;
-	transform: translateY(10vh);
+	transform: translate(-50vh);
 }
 .red {
 	display: inline-block;
