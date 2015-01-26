@@ -375,7 +375,7 @@ section {
 section > * {
 	margin: 50vh 0 0 0;
 	padding: 0;
-	transform: translate(-50vh);
+	transform: translateY(-50vh);
 }
 .red {
 	display: inline-block;
