@@ -132,7 +132,7 @@ li {
 }
 .intro {
 	text-align: center;
-	width:100wh;
+	width:100%;
 	color: #000;
 	background: url(../img/intro-bg.jpg) no-repeat;
 	background-size: cover;
@@ -241,18 +241,6 @@ li {
 	-moz-background-size: cover;
 	background-size: cover;
 	-o-background-size: cover;
-}
-
-@media(min-width:767px) {
-.content-section {
-}
-.download-section {
-}
-#map {
-	height: 400px;
-	margin-top: 250px;
-}
-;
 }
 .btn {
 	text-transform: uppercase;
