@@ -5,8 +5,8 @@
   var Plugin, defaults, pluginName;
   pluginName = "snapscroll";
   defaults = {
-    botPadding: 40,
-    topPadding: 40,
+    botPadding: 100,
+    topPadding: 100,
     scrollSpeed: 200,
     scrollEndSpeed: 100,
     scrollOptions: {'axis':'xy'}
