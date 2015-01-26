@@ -57,6 +57,3 @@ function onScroll(event) {
 $(document).ready(function() {
     $(document).on("scroll", onScroll);
 })
-$(function() {
-  $("#slides").snapscroll();
-});
