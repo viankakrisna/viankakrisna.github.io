@@ -25,12 +25,12 @@ h2 {
 	background: #fc0303;
 	padding: 5px;
 	transform: rotate(5deg);
-    outline: 1px solid transparent;
+    outline: 5px solid transparent;
 	transition: 200ms;
 }
 h2:hover {
 	transform: rotate(-5deg);
-    outline: 1px solid transparent;
+    outline: 5px solid transparent;
 }
 p {
 	margin: 0 0 25px;
@@ -192,7 +192,7 @@ li {
 	background: #fc0303;
 	border: #fc0303;
 	transform: rotate(360deg);
-  	outline: 1px solid transparent;
+  	outline: 5px solid transparent;
 }
 .btn-circle i.animated {
 	-webkit-transition-property: -webkit-transform;
