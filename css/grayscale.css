@@ -186,6 +186,7 @@ li {
 	-webkit-transition: background .3s ease-in-out;
 	-moz-transition: background .3s ease-in-out;
 	transition: background .3s ease-in-out;
+    	outline: 5px solid transparent;
 }
 .btn-circle:hover, .btn-circle:focus {
 	color: #f9f9f9;
