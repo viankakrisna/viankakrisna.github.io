@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>(Useful) CSS Tricks</title>
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/jquery.fullPage.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+	<div id="fullpage">
+		<div class="section text-center">
+			 <h1>
+			 	Useful CSS Tricks
+			 </h1>
+			 <p>
+			 	(that you might be already know)
+			 </p>
+			 <p>
+			 	by: <br>
+			 	Ade Viankakrisna Fadlil
+			 </p>
+		</div>
+		<div class="section clickable">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>vw and vh unit</h1>
+						<p>
+							vw and vh stands for viewport width and viewport height.<br>
+							it's useful for making element size exactly as the viewport size
+						</p>
+						<p>example:</p>
+					</div>
+					<div class="col-md-3">
+<pre class="fullScreen">.fullScreen {
+	width: 100vw;
+	height: 100vh;
+}</pre>
+					</div>
+					<div class="col-md-3">
+<pre class="quarterScreenText">.quarter {
+	font-size: 25vh;
+	line-height: 25vh;
+}</pre>
+					</div>
+					<div class="col-md-3">
+<pre class="halfWindowDiv">.halfWindowDiv {
+	width: 50vw;
+	height: 100vh;
+}</pre>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>transform and transition</h1>
+						<p>
+							transform is useful for animating elements<br>
+							it is preferable to use this for moving animated element than using position property
+						</p>
+						<p>example:</p>
+					</div>
+					<div class="col-md-4">
+<pre class="moveRight1s">.moveRight1s {
+	transform: translateX(0);
+	transition: 1s;
+}
+.moveRight1s:hover {
+	transform: translateX(100px);
+}</pre>
+					</div>
+					<div class="col-md-3">
+<pre class="zoom2x">.zoom2x {
+	transform: scale(1);
+	transition: 1s
+}
+.zoom2x:hover {
+	transform: scale(2);
+}</pre>
+					</div>
+					<div class="col-md-4">
+<pre class="zoomAndRotate360deg">.zoomAndRotate360deg {
+	transform: rotate(0deg) scale(1);
+	transition: 1s
+}
+.zoomAndRotate360deg:hover {
+	transform: rotate(360deg) scale(2);
+}
+</pre>
+					</div>
+				</div>
+			</div>
+		</div>		
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>em</h1>
+						<p>
+							em is useful for responsive design<br>
+							it scales proportionally from the parent's font-size (very useful when we were using media queries)<br>
+							it also can be use for the usual size unit for width, height, margin, padding, etc
+						</p>
+						<p>example:</p>
+					</div>
+					<div class="col-md-4">
+<pre class="16px">.grandParent {
+	font-size: 16px
+}
+.grandParent .parent {
+	font-size: 2em;
+}
+.grandParent .parent .child {
+	font-size: 0.5em;
+}
+</pre>
+					</div>
+					<div class="col-md-3">
+<p class="grandParent">
+	I am the grandParent<br>
+	<span class="parent">
+		I am the parent<br>
+		<em class="child">I am the child</em>
+	</span>
+</p>
+					</div>
+					<div class="col-md-4">
+<pre class="">.1emMargin {
+	margin-top: 1em;
+}
+.2emWidth {
+	width: 2em;
+}
+</pre>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>calc</h1>
+						<p>
+							calc is useful to perform calculation in css<br>
+							we can use it to combine css units or anything that needs mathematical method
+						</p>
+						<p>example:</p>
+					</div>
+					<div class="col-md-4">
+<pre class="percentPlusPixel">.100pxFromCenter {
+	margin-top: calc(50vh + 100px)
+}
+</pre>
+					</div>
+					<div class="col-md-3">
+<pre>.exactlyThird {
+	width: calc(100% / 3)
+}
+</pre>
+					</div>
+					<div class="col-md-4">
+<pre class="">.doubleTheCurrentFontSize {
+	font-size: calc(1em * 2);
+}
+</pre>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>Exactly center things</h1>
+						<p>
+							these are some of the methods that can be used for centering things. for more comprehensive list, see <a href="https://css-tricks.com/centering-css-complete-guide/">this guide on csstricks.com</a>
+						</p>
+						<p>example:</p>
+					</div>
+					<div class="col-md-3">
+<pre class="percentPlusPixel">.parent {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+.child{
+	width: 2em;
+	height: 2em;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+}
+</pre>
+					</div>
+					<div class="col-md-3">
+<pre>.parent {
+  position: relative;
+}
+.childWithNoHeight {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+</pre>
+					</div>
+					<div class="col-md-4">
+<pre>.center-text-trick {
+  height: 100px;
+  line-height: 100px;
+  white-space: nowrap;
+}
+</pre>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>browser specific rules</h1>
+						<p>
+							these are methods some rules for specific browser
+						</p>
+						<p>example:</p>
+					</div>
+					<div class="col-md-3">
+<pre class="percentPlusPixel">@-moz-document url-prefix() { 
+  .selector {
+     color:lime;
+  }
+}
+</pre>
+					</div>
+					<div class="col-md-3">
+<pre>&lt;!--[if IE]&gt;
+	&lt;link rel="stylesheet" type="text/css" href="all-ie-only.css" /&gt;
+&lt;![endif]--&gt;
+</pre>
+					</div>
+					<div class="col-md-3">
+<pre>-webkit-
+-moz-
+-ms-
+-o-
+</pre>
+
+	<p>we can also use <a href="http://leaverou.github.io/prefixfree/">this javascript plugin</a> to break free from vendor prefix </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>Great resources</h1>
+						<p>
+							These are great resources for learning CSS tricks, code inspiration, and start learn javascript
+						</p>
+					</div>
+					<div class="col-md-6">
+					<pre><a href="http://codepen.io/">Codepen.io</a>
+<a href="https://css-tricks.com/snippets/css/">CSS Tricks Snippets</a>
+<a href="http://eloquentjavascript.net/">Eloquent JavaScript Book</a>
+<a href="http://docs.emmet.io/cheat-sheet/">Emmet Cheat-Sheet for faster CSS </a>
+<a href="http://tutsplus.com/">tutsplus.com</a>
+<a href="https://www.youtube.com/user/thenewboston">thenewboston YouTube Channel</a>
+<a href="http://docs.calibreworks.com/faster-css-tweaking-with-livereload-for-sublime-text-3/">Faster CSS Tweaking with LiveReload for Sublime Text 3</a></pre>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section text-center">
+			<h1>
+				Thank You!
+			</h1>
+			<p>
+				please kindly visit my <a href="http://codepen.io/viankakrisna">codepen</a> and <a href="http://viankakrisna.github.io">github page</a>
+			</p>
+		</div>
+	</div> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="assets/js/jquery.fullPage.js"></script>
+	<script src="assets/js/function.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,52 @@
+.fullScreen.activated {
+	width: 100vw;
+	height: 100vh;
+}
+.quarterScreenText.activated {
+	font-size: 25vh;
+	line-height: 25vh;
+}
+.halfWindowDiv.activated {
+	width: 50vw;
+	height: 100vh;
+}
+.activated{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.moveRight1s {
+	transform: translateX(0);
+	transition: 1s;
+}
+.moveRight1s:hover {
+	transform: translateX(100px);
+}
+
+.zoom2x {
+	transform: scale(1);
+	transition: 1s
+}
+.zoom2x:hover {
+	transform: scale(2);
+}
+
+.zoomAndRotate360deg {
+	transform: rotate(0deg) scale(1);
+	transition: 1s;
+}
+.zoomAndRotate360deg:hover {
+	transform: rotate(360deg) scale(2)
+}
+.grandParent {
+	font-size: 16px
+}
+.parent {
+	font-size: 2em;
+}
+.child {
+	font-size: 0.5em;
+}
