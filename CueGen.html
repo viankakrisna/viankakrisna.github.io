@@ -31,8 +31,6 @@
                     <br>
                     <input type="text" placeholder="input album title" id="album" class="form-control">
                     <br>
-                    <input type="text" placeholder="input year released" id="year" class="form-control">
-                    <br>
                     <textarea name="youtube-list" id="youtube-list" cols="30" rows="10">
 Paste here
                     </textarea>
@@ -64,7 +62,6 @@ btn.on('click', function() {
     var collections = ar();
     var artist = $('#artist').val();
     var album = $('#album').val();
-    var year = $('#year').val();
 
     function toObject(arr) {
         var rv = {};
@@ -94,7 +91,7 @@ btn.on('click', function() {
     }
     var output = $('#output');
     	output.text() = '';
-    output.append('PERFORMER "' + artist + '"\nTITLE "' + album + '"\nFILE "' + artist + ' - ' + album + ' (' + year + ')' + '.mp3' + '" MP3\n');
+    output.append('PERFORMER "' + artist + '"\nTITLE "' + album + '"\nFILE "' + artist + ' - ' + album + '.mp3' + '" MP3\n');
     template(output);
     var final = $('#output').text();
     var hiddenElement = document.createElement('a');
