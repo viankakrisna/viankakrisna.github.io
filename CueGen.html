@@ -3,103 +3,128 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>CueGen</title>
+    <title>Cuesheet Generator</title>
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <style>
-    	input,
-    	textarea {
-    		max-width: 320px;
-    		width: 90%;
-    		margin: auto;
-    	}
-    	#process {
-    		margin: 1em ;
-    	}
+    body {
+        font-family: 'Source Sans Pro';
+    }
+    #header {
+        background-color: #321245;
+        color: #fff;
+        padding: 2em;
+        margin-bottom: 2em;
+    }
+    #process {
+        margin: 1em;
+    }
+    
+    pre {
+        min-height: 100vh;
+    }
+    
+    textarea.form-control {
+        height: auto;
+        color: #C8A599;
+    }
     </style>
 </head>
 
 <body>
+    <div id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="text-center">Cuesheet Generator</h1>
+                    <h4 class="text-center">
+                        This tool provide simple way to generate cuesheet based on 'timeline' - 'title' format
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <h1 class="text-center">Cuesheet Generator</h1>
-                <p class="text-center">
-                    This tool provide simple way to generate cuesheet based on 'timeline' - 'title' format
-                </p>
+            <div class="col-md-6">
                 <div class="text-center">
                     <input type="text" placeholder="input artist name" id="artist" class="form-control">
                     <br>
                     <input type="text" placeholder="input album title" id="album" class="form-control">
                     <br>
-                    <textarea name="youtube-list" id="youtube-list" cols="30" rows="10">
+                    <textarea name="youtube-list" id="youtube-list" cols="30" rows="10" class="form-control">
 Paste here
                     </textarea>
                     <br>
-                    <button id="process" class="btn btn-primary">Process</button>
+                    <button id="process" class="btn btn-primary generate">Generate Cuesheet!</button>
                     <br>
                 </div>
+            </div>
+            <div class="col-md-6">
                 <pre id="output"></pre>
             </div>
         </div>
     </div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script>
-var btn = $('#process');
-btn.on('click', function() {
-
-    var yt = $('#youtube-list').val();
-
-    var lines = yt.split('\n');
-    var ar = function() {
-        var collection = []
-        for (var i = 0; i < lines.length; i++) {
-            var a = lines[i].split(" - ");
-            collection.push(a)
-        }
-        return collection
-    }
-    var collections = ar();
-    var artist = $('#artist').val();
-    var album = $('#album').val();
-
-    function toObject(arr) {
-        var rv = {};
-        for (var i = 0; i < arr.length; ++i)
-            rv[i] = arr[i];
-        return rv;
-    }
-    var objCollections = toObject(collections);
-    var duration = collections[0][0];
-    var title = collections[0][1]
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+    var btn = $('#process');
     btn.on('click', function() {
 
-        console.log('')
+        var yt = $('#youtube-list').val();
 
-    })
-    var sw = function(args) {
-        for (var i = 0; i < args.length; i++) {
-            $('#output').append(args[i] + '\n');
+        var lines = yt.split('\n');
+        var ar = function() {
+            var collection = []
+            for (var i = 0; i < lines.length; i++) {
+                var a = lines[i].split(" - ");
+                collection.push(a)
+            }
+            return collection
         }
-    }
+        var collections = ar();
+        var artist = $('#artist').val();
+        var album = $('#album').val();
 
-    function template(e) {
-
-        for (var i = 0; i < collections.length; i++) {
-            e.append('  TRACK ' + ("0" + (i + 1)).slice(-2) + ' AUDIO\n    TITLE "' + collections[i][1] + '"\n    INDEX 01 ' + collections[i][0] + ':00\n')
+        function toObject(arr) {
+            var rv = {};
+            for (var i = 0; i < arr.length; ++i)
+                rv[i] = arr[i];
+            return rv;
         }
-    }
-    var output = $('#output');
-    	output.text('');
-    output.append('PERFORMER "' + artist + '"\nTITLE "' + album + '"\nFILE "' + artist + ' - ' + album + '.mp3' + '" MP3\n');
-    template(output);
-    var final = $('#output').text();
-    var hiddenElement = document.createElement('a');
+        var objCollections = toObject(collections);
+        var duration = collections[0][0];
+        var title = collections[0][1]
+        btn.on('click', function() {
 
-	hiddenElement.href = 'data:attachment/text,' + encodeURI(final);
-	hiddenElement.target = '_blank';
-	hiddenElement.download = artist + ' - ' + album + '.cue';
-	hiddenElement.click();
-});
-</script>
-	</body>
+            console.log('')
+
+        })
+        var sw = function(args) {
+            for (var i = 0; i < args.length; i++) {
+                $('#output').append(args[i] + '\n');
+            }
+        }
+
+        function template(e) {
+
+            for (var i = 0; i < collections.length; i++) {
+                e.append('  TRACK ' + ("0" + (i + 1)).slice(-2) + ' AUDIO\n    TITLE "' + collections[i][1] + '"\n    INDEX 01 ' + collections[i][0] + ':00\n')
+            }
+        }
+        var output = $('#output');
+        output.text('');
+        output.append('PERFORMER "' + artist + '"\nTITLE "' + album + '"\nFILE "' + artist + ' - ' + album + '.mp3' + '" MP3\n');
+        template(output);
+        var final = $('#output').text();
+        var hiddenElement = document.createElement('a');
+
+        hiddenElement.href = 'data:attachment/text,' + encodeURI(final);
+        hiddenElement.target = '_blank';
+        hiddenElement.download = artist + ' - ' + album + '.cue';
+        hiddenElement.click();
+    });
+    </script>
+</body>
+
 </html>
