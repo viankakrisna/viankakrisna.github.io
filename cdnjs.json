@@ -3728,7 +3728,6 @@
   {
     "url":"https://cdnjs.cloudflare.com/ajax/libs/yasr/2.5.5/yasr.bundled.min.js"
   },
-  {[
   {
     "url":"https://cdnjs.cloudflare.com/ajax/libs/16pixels/0.1.5/16pixels.min.css"
   },
@@ -7481,8 +7480,8 @@
   },
   {
     "url":"https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/1.0/zxcvbn-async.min.js"
-  }
-]
+  },
+  {
     "url":"https://cdnjs.cloudflare.com/ajax/libs/yepnope/1.5.4/yepnope.min.js"
   },
   {
